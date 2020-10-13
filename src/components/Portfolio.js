@@ -3,18 +3,18 @@ import React from "react"
 function Portfolio(props) {
   return (
     <div>
-<section id="portfolio-section">
+<section id="portfolio-section" >
           <div className="container">
             <div className="carousel-wrapper">
               <h2 className="portfolio-h2">Portfolio</h2>
               <div className="carousel" data-flickity>
                 <div className="carousel-cell">
                   <h3>Full Stack Web Development</h3>
-                  <a
+                  <button
                     className="more my-modals"
                     data-toggle="modal"
                     data-target="#fullStackModal"
-                    >Check it out</a
+                    >Check it out</button
                   >
                   <img
                     src="./assets/portfolio-coding copy.png"
@@ -27,11 +27,11 @@ function Portfolio(props) {
                 </div>
                 <div className="carousel-cell">
                   <h3>Professional Writing Examples</h3>
-                  <a
+                  <button
                     className="more my-modals"
                     data-toggle="modal"
                     data-target="#writingModal"
-                    >Check it out</a
+                    >Check it out</button
                   >
                   <img
                     src="./assets/portfolio-writing copy.png"
@@ -44,11 +44,11 @@ function Portfolio(props) {
                 </div>
                 <div className="carousel-cell">
                   <h3>Sample Graphic Design Work</h3>
-                  <a
+                  <button
                     className="more my-modals"
                     data-toggle="modal"
                     data-target="#graphicDesignModal"
-                    >Check it out</a
+                    >Check it out</button
                   >
                   <img
                     src="./assets/portfolio-graphic-design.png"
@@ -61,11 +61,11 @@ function Portfolio(props) {
                 </div>
                 <div className="carousel-cell">
                   <h3>Video Editing and Animation Work</h3>
-                  <a
+                  <button
                     className="more my-modals"
                     data-toggle="modal"
                     data-target="#videoAnimationModal"
-                    >Check it out</a
+                    >Check it out</button
                   >
                   <img
                     src="./assets/portfolio-animation.gif"
@@ -78,8 +78,8 @@ function Portfolio(props) {
                 </div>
               </div>
               <div id="portfolio-contact">
-                <a className="mybuttons mx-auto" href="#contact-me" role="button"
-                  >Get in Touch</a
+                <button className="mybuttons mx-auto" href="#contact-me" role="button"
+                  >Get in Touch</button
                 >
               </div>
             </div>

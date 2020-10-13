@@ -1,39 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/Header";
-import About from "./components/About";
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
+import MyNavbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import "./index.css";
 
+// import './App.css'; Will separate my CSS later
 
-function App() {
-  return (
-    <div>
-      <Router>
-      <div>
-        <Navbar />
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <MyNavbar />
+        <div className="page-container">
         <Switch>
-          <Route exact path={["/", "/home"]}>
-            <Header />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/portfolio">
-            <Portfolio />
-          </Route>
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
-          {/* <Route>
-            <NoMatch />
-          </Route> */}
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/contact" component={Contact} />
         </Switch>
+        </div>
+        <Footer />
       </div>
-    </Router>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

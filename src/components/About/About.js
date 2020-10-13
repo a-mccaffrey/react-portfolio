@@ -1,10 +1,12 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
+import "./About.css";
 
 function About() {
   return (
     <div>
       <main id="about-me-content" className="container">
-        <div className="card">
+        <Card>
           <div className="row no-gutters">
             <div className="col-md-4">
               <img
@@ -34,25 +36,6 @@ function About() {
                   citizen of Ireland, I am legally allowed to work in
                   Luxembourg, where I intend to settle with my Luxembourgish
                   partner.
-                </p>
-                <p className="card-text">
-                  Professionally, I have 4 years of B2B marketing experience in
-                  multiple countries. I started my career in Shanghai, China,
-                  where I worked for the Canadian Chamber of Commerce as Media
-                  and Communications Manager. This role taught me about
-                  nation-branding, building a business community, and working
-                  with stakeholders from both business and government. Now, I'm
-                  the marketing lead for the Commerce practice of a global
-                  commerce and data management services provider, Pivotree. It
-                  has been an amazing experience to work here. Though I'm not
-                  client-facing, we are a client-first organization - everything
-                  we do is for our clients' good, from the top-down. My
-                  knowledge and experience of the eCommerce industry, dev-team
-                  dynamics, branding, marketing and sales automation, as well as
-                  content creation have grown significantly. Being exposed to
-                  some of the most outstanding developers on this planet (not an
-                  exaggeration) helped me immensely in pursuing an education in
-                  full-stack web development, and developing this portfolio.
                 </p>
                 <p className="card-text">
                   If you want to learn more about my education and background,
@@ -103,7 +86,7 @@ function About() {
               </div>
             </div>
           </div>
-        </div>
+        </Card>
       </main>{" "}
     </div>
   );

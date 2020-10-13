@@ -10,9 +10,7 @@ html {
   overflow: hidden;
   scroll-behavior: smooth;
 }
-h1 {
-  font-size: 70px !important;
-}
+
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -23,6 +21,9 @@ h2 {
 h2.portfolio-h2 {
   text-align: center;
   margin-top: 30px;
+}
+.page-container {
+  min-height: 60vh;
 }
 /**
  * Disable smooth scrolling when users have prefers-reduced-motion enabled
@@ -43,16 +44,13 @@ h2.portfolio-h2 {
 a {
   color: #ed1b57;
   text-decoration: none !important;
-}
-a:hover {
-  color: #f15722;
-}
+  }
 li {
   display: table-cell;
   position: relative;
   padding: 15px 0;
 }
-a.nav-link {
+/* a.nav-link {
   position: relative;
 }
 a.nav-link:after {
@@ -91,7 +89,7 @@ a.body-link:hover:after {
   left: 0;
 }
 /* styling the navbar */
-.navbar {
+/* .navbar {
   border-bottom-style: solid;
   border-color: #0a1212;
   padding: 0 15px 0 15px;
@@ -110,11 +108,11 @@ a.body-link:hover:after {
 }
 .transparent-background {
   background-color: #ffffff;
-}
+} */
 
 /* footer stuff */
 
-footer {
+/* footer {
   height: auto;
   text-align: center;
   padding: 20px;
@@ -153,7 +151,7 @@ footer {
   background: #28a745;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 /* make sure the navbar logo stays the right size */
 img.logo {
@@ -269,9 +267,9 @@ form {
   margin: 20px;
 }
 /* card styling */
-.card {
+/* .card {
   border-style: none;
-}
+} */
 /* button styling */
 .mybutton:after {
   content: "";
@@ -359,11 +357,10 @@ h5.contact-form {
   margin-bottom: 20px;
 }
 
-hr {
+/* hr {
   margin: 30px 0 20px 0;
   border: 1px solid #0a1212;
-
-}
+} */
 .icon-container {
   padding: 50px 20px 0px 20px;
 }
@@ -413,7 +410,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.hero {
+/* .hero {
   max-height: 100vh;
   margin-top: 10%;
 }
@@ -436,9 +433,9 @@ body {
   transform: translateZ(-1px) scale(2);
   z-index: -1;
   height: 100vh;
-}
+} */
 
-.content {
+/* .content {
   position: relative;
   z-index: 1;
   background-image: url(./assets/faded-pink-divider.svg);
@@ -446,8 +443,8 @@ body {
   background-size: 110%;
   padding-top: 395px;
   margin: 400px -20px 0 -20px;
-}
-@media screen and (max-width: 1000px) {
+} */
+/* @media screen and (max-width: 1000px) {
   .content {
   position: relative;
   z-index: 1;
@@ -457,28 +454,28 @@ body {
   padding-top: 350px;
   margin: 400px -20px 0 -20px;
 }
-}
+} */
 
-#about-me-content {
+/* #about-me-content {
   margin-bottom: 100px;
   margin-top: 30px;
 }
 .anchor {
 position: fixed;
 top: 113vh;
-}
+} */
 @media screen and (max-width: 1000px) {
 .anchor {
   position: fixed;
   top: 175vh;
   }
 }
-#about-me-content .card {
+/* #about-me-content .card {
   background-color: #ffffff;
   padding: 50px;
   border: 2px solid #0a1212;
   box-shadow: 0px 12px 39px -19px rgba(0, 0, 0, 0.75);
-}
+} */
 
 #portfolio-section {
   margin-bottom: 100px;
