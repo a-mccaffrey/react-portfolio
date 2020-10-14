@@ -4,10 +4,10 @@
   padding: 20px;
   font-family: futura;
   text-shadow: none;
-  background-color: #f8acab;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), #f8acab);
 }
 .footer-background {
-    position: relative;
+  position: relative;
   z-index: 1;
   background-image: url(../../assets/faded-pink-divider.svg);
   background-repeat: no-repeat;
