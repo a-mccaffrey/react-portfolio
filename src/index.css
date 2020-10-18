@@ -274,7 +274,7 @@ form {
   border-style: none;
 } */
 /* button styling */
-.mybutton:after {
+/* .mybuttons:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -305,7 +305,7 @@ form {
   color: #ffffff;
   background: #0a1212;
   text-decoration: none;
-}
+} */
 
 /* Contact Me Area */
 .form-control {

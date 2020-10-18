@@ -1,32 +1,62 @@
-import React, { Component, useState} from "react";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+import React, { Component } from "react";
+import { Modal, Button } from "react-bootstrap";
+import "./Modals.css";
 
 class CodingModal extends Component {
-    render() {
-    const [show, setShow] = useState(false);
-  
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-  
+  state = {
+    isOpen: false,
+  };
+
+  openModal = () => this.setState({ isOpen: true });
+  closeModal = () => this.setState({ isOpen: false });
+
+  render() {
+    // const data = [
+    //   {
+    //     title: "Recipe Generator Deployed Application",
+    //     link: "https://a-mccaffrey.github.io/aplus-foodies/",
+    //     image: "./assets/Coding Screenshots/recipe-generator.png",
+    //     alt: "A screenshot of recipe generator application",
+    //   },
+    //   {
+    //     name: "Vuejs",
+    //     url: "https://vuejs.org",
+    //     description: "The Progressive JavaScript Framework",
+    //   },
+    //   {
+    //     name: "Emberjs",
+    //     url: "https://www.emberjs.com",
+    //     description:
+    //       "Ember.js is an open-source JavaScript web framework, based on the Model–view–viewmodel pattern",
+    //   },
+    // ];
+
     return (
       <div>
-        <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
-        </Button>
-  
-        <Modal show={show} onHide={handleClose}>
+        <div className="d-flex align-items-center justify-content-center">
+          <Button
+            className="mybuttons"
+            variant="primary"
+            onClick={this.openModal}
+          >
+            Look
+          </Button>
+        </div>
+        <Modal show={this.state.isOpen} size="xl" onHide={this.closeModal}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Featured Projects</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-          <h3 class="m-5">
-                  My entire portfolio (including graphics) was created from
-                  scratch using GitHub, Bootstrap, React,
-                  Illustrator, and Photoshop. I hope you enjoy it.
-                </h3>
-                <h4>Featured Projects</h4>
-                {/* <!-- Recipe Generator --> */}
+            <h3 className="m-5">
+              My entire portfolio (including graphics) was created from scratch
+              using GitHub, Bootstrap, React, Illustrator, and Photoshop. I hope
+              you enjoy it.
+            </h3>
+            <h4>Featured Projects</h4>
+            {/* <!-- Recipe Generator --> */}
+            {/* Destructuring will be a problem for future me - I am aware this is not as dry as it should be */}
+            {/* {data.map(({ title, link, image, id }) => ( */}
+              <div>
                 <a
                   href="https://a-mccaffrey.github.io/aplus-foodies/"
                   target="_blank"
@@ -37,9 +67,11 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/recipe-generator.png"
                     alt="A screenshot of recipe generator application"
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
-                  <h5 class="pb-4">Recipe Generator Deployed Application</h5>
+                  <h5 className="pb-4">
+                    Recipe Generator Deployed Application
+                  </h5>
                 </a>
                 <p>
                   <a
@@ -47,7 +79,8 @@ class CodingModal extends Component {
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="This is an external link (opens in a new tab)"
-                    >Click here for GitHub repository
+                  >
+                    Click here for GitHub repository
                   </a>
                 </p>
                 {/* <!-- Appointify --> */}
@@ -61,21 +94,22 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/appointify.png"
                     alt="A screenshot of an application with the headline: An open source project for booking doctor's appointments"
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
-                  <h5 class="pb-4">Appointify</h5>
+                  <h5 className="pb-4">Appointify</h5>
                 </a>
-                <p class="pb-4">
+                <p className="pb-4">
                   <a
                     href="https://github.com/a-mccaffrey/covid-doctor-checkup"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="This is an external link (opens in a new tab)"
-                    >Click here for GitHub repository
+                  >
+                    Click here for GitHub repository
                   </a>
                 </p>
                 <hr />
-                <h4 class="pt-4">Additional GitHub projects</h4>
+                <h4 className="pt-4">Additional GitHub projects</h4>
                 {/* <!-- Weather Dashboard --> */}
                 <a
                   href="https://a-mccaffrey.github.io/gabriels-weather-dashboard/"
@@ -87,17 +121,18 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/Weather-Dashboard.png"
                     alt="A screenshot of a weather dashboard. The navbar is the colours of the Irish flag - green, white, and orange."
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
-                  <h5 class="pb-4">Gabriel's Weather Dashboard</h5></a
-                >
+                  <h5 className="pb-4">Gabriel's Weather Dashboard</h5>
+                </a>
                 <p>
                   <a
                     href="https://github.com/a-mccaffrey/gabriels-weather-dashboard"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="This is an external link (opens in a new tab)"
-                    >Click here for GitHub repository
+                  >
+                    Click here for GitHub repository
                   </a>
                 </p>
                 {/* <!-- Work Day Scheduler --> */}
@@ -111,17 +146,18 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/Work-Scheduler.png"
                     alt="A screenshot of a work day scheduler - a simple calendar app for scheduling your workday."
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
-                  <h5 class="pb-4">Workday Scheduler</h5></a
-                >
+                  <h5 className="pb-4">Workday Scheduler</h5>
+                </a>
                 <p>
                   <a
                     href="https://github.com/a-mccaffrey/workday-scheduler"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="This is an external link (opens in a new tab)"
-                    >Click here for GitHub repository
+                  >
+                    Click here for GitHub repository
                   </a>
                 </p>
                 {/* <!-- Note Taker --> */}
@@ -135,17 +171,18 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/note-taker.png"
                     alt="A screenshot of a note taker application."
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
-                  <h5 class="pb-4">JSON Note Taker</h5></a
-                >
+                  <h5 className="pb-4">JSON Note Taker</h5>
+                </a>
                 <p>
                   <a
                     href="https://github.com/a-mccaffrey/JSON-note-taker"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="This is an external link (opens in a new tab)"
-                    >Click here for GitHub repository
+                  >
+                    Click here for GitHub repository
                   </a>
                 </p>
                 {/* <!-- Readme Generator --> */}
@@ -159,13 +196,13 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/cli-readme.png"
                     alt="A screenshot of a command line application that generates a useable readme."
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
                   <h5>
                     Readme Generator - Command Line Application (GitHub repo
                     only)
-                  </h5></a
-                >
+                  </h5>
+                </a>
                 {/* <!-- Employee Summary Template Engine --> */}
                 <a
                   href="https://github.com/a-mccaffrey/template-engine-employee-summary"
@@ -177,13 +214,13 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/employee-tracker.png"
                     alt="A screenshot of an employee summary template generated through a command line application."
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
                   <h5>
                     Employee Summary Template Engine - Command Line Application
                     (GitHub repo only)
-                  </h5></a
-                >
+                  </h5>
+                </a>
                 {/* <!-- MySQL Employee Tracker --> */}
                 <a
                   href="https://github.com/a-mccaffrey/MySQL-Employee-Tracker"
@@ -195,51 +232,57 @@ class CodingModal extends Component {
                     src="./assets/Coding Screenshots/employee-manager.png"
                     alt="A screenshot of a command line application that helps track employees within an organization."
                     width="50%"
-                    class="video-example"
+                    className="video-example"
                   />
-                  <h5 class="pb-4">
+                  <h5 className="pb-4">
                     MySQL Employee Tracker - Command Line Application (GitHub
                     repo only)
-                  </h5></a
-                >
+                  </h5>
+                </a>
 
                 <hr />
-                <h4 class="pt-4">WordPress Pages (Not full-stack)</h4>
+                <h4 className="pt-4">WordPress Pages (Not full-stack)</h4>
                 <a
                   href="https://pivotree.com/platforms/coveo-for-commerce/"
                   target="_blank"
-                  class="d-block m-3"
+                  className="d-block m-3"
                   rel="noreferrer noopener"
                   aria-label="This is an external link (opens in a new tab)"
-                  >Coveo for Commerce Webpage</a
                 >
+                  Coveo for Commerce Webpage
+                </a>
                 <a
                   href="https://pivotree.com/our-clients/tgi-fridays-sap-commerce-marketing-and-customer-data/"
                   target="_blank"
-                  class="d-block m-3"
+                  className="d-block m-3"
                   rel="noreferrer noopener"
                   aria-label="This is an external link (opens in a new tab)"
-                  >Case Study Page</a
                 >
+                  Case Study Page
+                </a>
                 <a
                   href="https://pivotree.com/social-distancing-commerce-enablement-solutions/buy-online-pickup-in-store-bopis-with-curbside-pickup-by-pivotree/"
                   target="_blank"
-                  class="d-block m-3"
+                  className="d-block m-3"
                   rel="noreferrer noopener"
                   aria-label="This is an external link (opens in a new tab)"
-                  >Buy Online Pickup in Store Solution Page</a
                 >
+                  Buy Online Pickup in Store Solution Page
+                </a>
                 <a
                   href="https://pivotree.com/about-us/newsroom/"
                   target="_blank"
-                  class="d-block m-3"
+                  className="d-block m-3"
                   rel="noreferrer noopener"
                   aria-label="This is an external link (opens in a new tab)"
-                  >Newsroom</a
                 >
+                  Newsroom
+                </a>
+              </div>
+            {/* ))} */}
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={this.closeModal}>
               Close
             </Button>
           </Modal.Footer>
