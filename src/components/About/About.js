@@ -5,12 +5,21 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "./About.css";
+import { fadeInLeft } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 class About extends Component {
-  render() {
+    render() {
+      const styles = {
+        fadeInLeft: {
+          animation: "x 1s",
+          animationName: Radium.keyframes(fadeInLeft, "fadeInLeft"),
+        }
+      };
     return (
-      <div>
-        <Container>
+    <StyleRoot>
+      <div style={styles.fadeInLeft}>        
+      <Container>
           <Card className="about-card">
             <Row>
               <Col sm={4}>
@@ -88,6 +97,7 @@ class About extends Component {
           </Card>
         </Container>
       </div>
+      </ StyleRoot>
     );
   }
 }

@@ -44,14 +44,14 @@ class CodingModal extends Component {
         </div>
         <Modal show={this.state.isOpen} size="xl" onHide={this.closeModal}>
           <Modal.Header closeButton>
-            <Modal.Title>Featured Projects</Modal.Title>
+            <Modal.Title>Coding Projects</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <h3 className="m-5">
+          <Modal.Body className="text-center">
+            <p className="m-5">
               My entire portfolio (including graphics) was created from scratch
               using GitHub, Bootstrap, React, Illustrator, and Photoshop. I hope
               you enjoy it.
-            </h3>
+            </p>
             <h4>Featured Projects</h4>
             {/* <!-- Recipe Generator --> */}
             {/* Destructuring will be a problem for future me - I am aware this is not as dry as it should be */}
@@ -282,7 +282,7 @@ class CodingModal extends Component {
             {/* ))} */}
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.closeModal}>
+          <Button variant="secondary" onClick={this.closeModal} className="mybuttons">
               Close
             </Button>
           </Modal.Footer>

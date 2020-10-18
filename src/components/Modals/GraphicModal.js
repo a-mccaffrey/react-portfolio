@@ -13,15 +13,17 @@ class GraphicModal extends Component {
     return (
       <div>
         <div className="d-flex align-items-center justify-content-center">
-          <Button variant="primary" size="xl" onClick={this.openModal}>
+          <Button vvariant="primary"
+            onClick={this.openModal}
+            className="mybuttons">
             Enjoy
           </Button>
         </div>
-        <Modal show={this.state.isOpen} onHide={this.closeModal}>
+        <Modal show={this.state.isOpen} size="xl" onHide={this.closeModal}>
           <Modal.Header closeButton>
             <Modal.Title>Graphic Design Examples</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className="text-center">
             <h4>Case Studies</h4>
             <a
               href="https://info.pivotree.com/hubfs/TGI%20Fridays%20C4HANA%20Case%20Study.pdf"
@@ -115,7 +117,7 @@ class GraphicModal extends Component {
             </a>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.closeModal}>
+          <Button variant="secondary" onClick={this.closeModal} className="mybuttons">
               Close
             </Button>
           </Modal.Footer>

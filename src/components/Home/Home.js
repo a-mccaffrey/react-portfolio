@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./Home.css";
+import { fadeInLeft } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 class Home extends Component {
   playAudio(event) {
@@ -10,10 +12,17 @@ class Home extends Component {
   }
 
   render() {
+    const styles = {
+      fadeInLeft: {
+        animation: "x 1s",
+        animationName: Radium.keyframes(fadeInLeft, "fadeInLeft"),
+      }
+    };
     return (
-      <div>
-        <header className="content-container hero">
-          <div className="hero-text">
+      <div>             
+      <header className="content-container hero">
+      <StyleRoot>
+          <div style={styles.fadeInLeft} className="hero-text">
             <h1 className="display-4 text-center">Hello, Moien!</h1>
             <p className="lead text-center">
               My name is Aisling McCaffrey
@@ -63,6 +72,7 @@ class Home extends Component {
               </NavLink>
             </div>
           </div>
+          </ StyleRoot>
         </header>
       </div>
     );
